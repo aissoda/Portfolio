@@ -1,5 +1,11 @@
 package PaymentApp;
 
-public class MainForm {
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+@SpringBootApplication
+public class MainForm {
+	public static void main(String[] args) {
+		SpringApplication.run(MainForm.class, args);
+	}
 }

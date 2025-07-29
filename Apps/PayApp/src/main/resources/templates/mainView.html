@@ -1,45 +1,23 @@
 <!DOCTYPE html>
-<html lang="en"
-      xmlns:th="http://www.thymeleaf.org">
-
+<html lang="en">
 <head>
-    <meta charset="UTF-8"/>
-    <title>Data Table</title>
-    <link rel="stylesheet" th:href="@{/style.css}">
+    <meta charset="UTF-8">
+    <title>My Spring Boot App</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-<table>
-    <caption>Item Catalog</caption>
-    <thead>
-    <tr>
-        <th>ID</th>
-        <th>Full Name</th>
-        <th>Email</th>
-        <th>Role</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-        <td>1</td>
-        <td>Amjad Pauzi</td>
-        <td>amjad@example.com</td>
-        <td>Admin</td>
-    </tr>
-    <tr>
-        <td>2</td>
-        <td>Sarah Lee</td>
-        <td>sarah@example.com</td>
-        <td>User</td>
-    </tr>
-    <tr>
-        <td>3</td>
-        <td>John Tan</td>
-        <td>john@example.com</td>
-        <td>Moderator</td>
-    </tr>
-    </tbody>
-</table>
+    <h1>Welcome to My Spring Boot App</h1>
+    <button onclick="fetchData()">Call API</button>
+    <p id="response"></p>
 
+    <script>
+        function fetchData() {
+            fetch('/api/greeting')
+                .then(res => res.json())
+                .then(data => {
+                    document.getElementById('response').innerText = data.message;
+                });
+        }
+    </script>
 </body>
 </html>

@@ -1,37 +1,17 @@
-/* Reset some basic styles */
 body {
     font-family: Arial, sans-serif;
-    margin: 40px;
-    background-color: #f4f4f4;
+    padding: 40px;
+    background: #f0f0f0;
+}
+
+h1 {
     color: #333;
 }
 
-/* Table Styling */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-caption {
-    caption-side: top;
-    font-size: 1.2em;
-    font-weight: bold;
-    margin: 10px 0;
-}
-
-thead {
-    background-color: #007BFF;
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
     color: white;
-}
-
-th, td {
-    padding: 12px 15px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-}
-
-tr:hover {
-    background-color: #f1f1f1;
+    border: none;
+    border-radius: 5px;
 }

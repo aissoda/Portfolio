@@ -1,0 +1,94 @@
+/* The rounded panel */
+.task-panel {
+  width: 100%;
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+.task-panel-title {
+  margin: 0 0 1rem;
+}
+
+/* Table */
+.task-tb {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.task-tb th,
+.task-tb td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.task-tb th {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #6b7280;
+}
+
+.task-tb tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.task-tb tbody tr:hover {
+  background: #f9fafb;
+}
+
+/* Keep the button column narrow and right-aligned */
+.task-tb th:last-child,
+.task-tb td:last-child {
+  width: 1%;
+  text-align: right;
+  white-space: nowrap;
+}
+
+/* Edit button (matches your teal theme) */
+.edit-btn {
+  padding: 0.35rem 0.9rem;
+  border: 1px solid #00b894;
+  border-radius: 6px;
+  background: #55efc4;
+  color: #00b894;
+  font: inherit;
+  cursor: pointer;
+}
+
+.edit-btn:hover {
+  background: #005e4b;
+  color: #ffffff;
+}
+
+/* Status badges */
+.status {
+  display: inline-block;
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+}
+
+.status-done {
+  background: #d0fff2;
+  color: #00b894;
+}
+
+.status-pending {
+  background: #fff4d6;
+  color: #b7791f;
+}
+
+/* Hidden visually, still read by screen readers */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}

@@ -2,15 +2,53 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TeachKit • Home</title>
-  <link rel="stylesheet" href="css/main-content.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TeachKit • Home</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/main-content.css">
 </head>
 
 <body>
-<div class="greetings">
-    <h2 class="greeting">Hi, Welcome</h2>
-</div>
+    <div id="sidebar-comp"></div>
 
+    <main id="content" class="content">
+        <div class="greetings">
+            <h2 class="greeting">Hi, Welcome</h2>
+        </div>
+
+
+        <section class="task-panel">
+            <table class="task-tb">
+                <thead>
+                    <tr>
+                        <th>Tasks</th>
+                        <th>Status</th>
+                        <th>Last Modified Date</th>
+                        <th><span class="visually-hidden">Actions</span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Prepare lesson plan</td>
+                        <td><span class="status status-done">Completed</span></td>
+                        <td>7 Oct 2026</td>
+                        <td><button class="edit-btn" aria-label="Edit Prepare lesson plan">Edit</button></td>
+                    </tr>
+                    <tr>
+                        <td>Grade quiz papers</td>
+                        <td><span class="status status-pending">Pending</span></td>
+                        <td>8 Oct 2026</td>
+                        <td><button class="edit-btn" aria-label="Edit Grade quiz papers">Edit</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="js/script.js"></script>
 </body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TeachKit</title>
+  <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="sidebar.css">
+</head>
+
+<body>
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-header">
+      <h2 class="sidebar-title">TeachKit</h2>
+      <button id="toggle-btn" aria-controls="sidebar" aria-expanded="true" aria-label="Fold sidebar">☰</button>
+    </div>
+
+    <h2 class="sidebar-title-2">Menu</h2>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Projects</a>
+      <a href="#">Contact</a>
+    </nav>
+  </aside>
+
+  <!-- Small tab shown only when the sidebar is folded -->
+  <button id="open-btn" class="open-btn" aria-controls="sidebar" aria-label="Open sidebar">&gt;</button>
+
+
+  <main id="content" class="content">
+    <h1>Main Content</h1>
+    <p></p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

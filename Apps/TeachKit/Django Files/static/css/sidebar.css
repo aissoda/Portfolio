@@ -1,0 +1,95 @@
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 240px;
+    height: 100vh;
+    background: #feffff;
+    color: #000000;
+    border-right: 1px solid #e5e7eb;
+    padding: 1.5rem 1rem;
+    transition: transform 0.3s ease;
+}
+
+/* Puts the title and the ☰ button on one row */
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.sidebar-title {
+    margin: 0;
+}
+
+.sidebar-title-2 {
+  margin: 0 0 0.3rem;
+  padding-left: 0.60rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #babdc4;
+}
+
+.sidebar nav a {
+    display: block;
+    color: #000000;
+    text-decoration: none;
+    padding: 0.6rem 0.75rem;
+    border-radius: 6px;
+}
+
+.sidebar nav a:hover {
+    background: #d0fff2;
+    color: #00b894;
+}
+
+/* The small ">" tab, hidden until the sidebar is folded */
+.open-btn {
+    position: fixed;
+    top: 1.5rem;
+    left: 0;
+    display: none;
+    width: 28px;
+    height: 38px;
+    border: 1px solid #00b894;
+    border-radius: 0 8px 8px 0;
+    background: #55efc4;
+    color: #00b894;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.open-btn:hover {
+    background: #005e4b;
+}
+
+#toggle-btn {
+    font-size: 1.1rem;
+    padding: 0.3rem 0.6rem;
+    cursor: pointer;
+    border: 1px solid #00b894;
+    border-radius: 6px;
+    background: #55efc4;
+    color: #00b894;
+}
+
+#toggle-btn:hover {
+    background: #005e4b;
+}
+
+/* Folded state */
+body.collapsed .sidebar {
+    transform: translateX(-100%);
+}
+
+body.collapsed .content {
+    margin-left: 0;
+    padding-left: 3rem;
+}
+
+body.collapsed .open-btn {
+    display: block;
+}

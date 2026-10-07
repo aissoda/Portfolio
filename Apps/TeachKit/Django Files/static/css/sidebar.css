@@ -9,6 +9,8 @@
     border-right: 1px solid #e5e7eb;
     padding: 1.5rem 1rem;
     transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Puts the title and the ☰ button on one row */
@@ -24,18 +26,18 @@
 }
 
 .sidebar-title-2 {
-  margin: 0 0 0.3rem;
-  padding-left: 0.60rem;
-  font-size: 1.1rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: #babdc4;
+    margin: 0 0 0.3rem;
+    padding-left: 0.60rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #636e72;
 }
 
 .sidebar nav a {
     display: block;
-    color: #000000;
+    color: #636e72;
     text-decoration: none;
     padding: 0.6rem 0.75rem;
     border-radius: 6px;
@@ -44,6 +46,24 @@
 .sidebar nav a:hover {
     background: #d0fff2;
     color: #00b894;
+}
+
+.sidebar-footer {
+  margin-top: auto;               /* pushes it to the bottom */
+  padding-top: 1rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.sidebar-footer a {
+  display: block;
+  color: #636e72;
+  text-decoration: none;
+  padding: 0.6rem 0.75rem;
+  border-radius: 6px;
+}
+
+.sidebar-footer a:hover {
+   color: #0059ce;
 }
 
 /* The small ">" tab, hidden until the sidebar is folded */
@@ -92,4 +112,52 @@ body.collapsed .content {
 
 body.collapsed .open-btn {
     display: block;
+}
+
+/* Workspace dropdown button (looks like the other links) */
+.dropdown-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0.6rem 0.75rem;
+  border: none;
+  border-radius: 6px;
+  background: none;
+  color: #636e72;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.dropdown-toggle:hover {
+  background: #d0fff2;
+  color: #00b894;
+}
+
+.chevron {
+  transition: transform 0.3s ease;
+}
+
+/* Submenu: collapsed by default */
+.submenu {
+  max-height: 0;
+  overflow: hidden;
+  visibility: hidden;
+  padding-left: 0.75rem;
+  transition: max-height 0.3s ease, visibility 0.3s;
+}
+
+.submenu a {
+  font-size: 0.95rem;
+}
+
+/* Open state */
+.dropdown.open .submenu {
+  max-height: 200px;
+  visibility: visible;
+}
+
+.dropdown.open .chevron {
+  transform: rotate(180deg);
 }

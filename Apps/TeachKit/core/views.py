@@ -1,3 +1,8 @@
+from django.http import JsonResponse
 from django.shortcuts import render
 
-# Create your views here.
+def home(request):
+    return render(request,'home.html')
+
+def ping(request):
+    return JsonResponse({"message": "Assalamualaikum"})

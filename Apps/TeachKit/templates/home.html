@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title%}TeachKit • Home {% endblock title%}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% endblock %}
+
+{% block content %}
+ <div class="content-header">
+            <h2 class="greetings">Hi, noob</h2>
+
+            <div class="icon-btn" id="account-wrapper">
+                <button class="icon-toggle" aria-expanded="false" aria-controls="icon-dropdown" aria-haspopup="true"
+                    aria-label="Account menu">
+                    <span class="icon" id="account-icon" data-name="Alice Johnson">A</span>
+                    <span class="chevron">▾</span>
+                </button>
+
+                <div class="icon-menu" id="icon-dropdown">
+                    <a href="#">Account settings</a>
+                    <a href="#">Log out</a>
+                </div>
+            </div>
+        </div>
+
+
+        <section class="task-panel">
+            <table class="task-tb">
+                <thead>
+                    <tr>
+                        <th>Tasks</th>
+                        <th>Status</th>
+                        <th>Last Modified Date</th>
+                        <th><span class="visually-hidden">Actions</span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Prepare lesson plan</td>
+                        <td><span class="status status-done">Completed</span></td>
+                        <td>7 Oct 2026</td>
+                        <td><button class="edit-btn" aria-label="Edit Prepare lesson plan">Edit</button></td>
+                    </tr>
+                    <tr>
+                        <td>Grade quiz papers</td>
+                        <td><span class="status status-pending">Pending</span></td>
+                        <td>8 Oct 2026</td>
+                        <td><button class="edit-btn" aria-label="Edit Grade quiz papers">Edit</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+{% endblock %}
